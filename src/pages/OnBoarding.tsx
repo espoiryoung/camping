@@ -1,8 +1,7 @@
 import React from 'react';
-import { Image } from 'react-native';
 import Onboarding from 'react-native-onboarding-swiper';
 
-import { SafeAreaView, Text, TextInput,View} from 'react-native';
+import {Modal, Image, SafeAreaView, Text, TextInput,View} from 'react-native';
 const OnBoarding=()=>{
     return(
         <SafeAreaView style={{flex:1}}>
@@ -12,25 +11,25 @@ const OnBoarding=()=>{
                 pages={[
                 {
                     backgroundColor: '#fff',
-                    image: <Image source={require('../../assets/images/howToUse.png')} />,
+                    image: <Image source={require('@images/howToUse.png')} />,
                     title: 'Onboarding',
                     subtitle: 'Done with React Native Onboarding Swiper',
                 },
                 {
                     backgroundColor: '#fe6e58',
-                    image: <Image source={require('../../assets/images/recommand.png')} />,
+                    image: <Image source={require('@images/recommand.png')} />,
                     title: 'The Title',
                     subtitle: 'This is the subtitle that sumplements the title.',
                 },
                 {
                     backgroundColor: '#999',
-                    image: <Image source={require('../../assets/images/inform.png')} />,
+                    image: <Image source={require('@images/inform.png')} />,
                     title: 'Triangle',
                     subtitle: "Beautiful, isn't it?",
                 },
                 {
                     backgroundColor: '#fff',
-                    image: <Image source={require('../../assets/images/community.png')} />,
+                    image: <Image source={require('@images/community.png')} />,
                     title: 'Onboarding',
                     subtitle: 'Done with React Native Onboarding Swiper',
                 },

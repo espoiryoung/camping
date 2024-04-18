@@ -1,11 +1,14 @@
-import {create} from 'apisauce';
+
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 //import { NavigationContainer } from '@react-navigation/native';
 import React,{useEffect, useState} from 'react';
 import type {PropsWithChildren} from 'react';
 import Splash from './src/pages/Splash.jsx';
-import OnBoarding from './src/pages/OnBoarding.jsx'
+import OnBoarding from '@pages/OnBoarding.tsx'
 import LogIn from './src/pages/LogIn.jsx';
+import CampDetail from './src/pages/CampDetail.tsx';
+import Home from './src/pages/Home.tsx';
+import ArticleMain from '@pages/ArticleMain.tsx'
 import {
   SafeAreaView,
   ScrollView,
@@ -14,6 +17,7 @@ import {
   Text,
   useColorScheme,
   View,
+  ImageBackground
 } from 'react-native';
 
 import {
@@ -38,17 +42,23 @@ function App(): React.JSX.Element {
 
  
   return (
-    <SafeAreaView style={{flex:1,}}>
-      <OnBoarding/>
-      {/* <LogIn/> */}
-      {/* <Splash /> */}
-      {/* <NavigationContainer>
-        <Tab.Navigator>
-          <Tab.Screen name="logIn" component={logIn} />
-          <Tab.Screen name="splash" component={splash} />
-        </Tab.Navigator>
-      </NavigationContainer> */}
-    </SafeAreaView>
+    
+      <SafeAreaView style={{flex:1}}>
+        
+        {/* <OnBoarding/> */}
+        <CampDetail/>  
+        {/* <Home/> */}
+        {/* <ArticleMain /> */}
+        {/* <Splash /> */}
+        {/* <NavigationContainer>
+          <Tab.Navigator>
+            <Tab.Screen name="logIn" component={logIn} />
+            <Tab.Screen name="splash" component={splash} />
+          </Tab.Navigator>
+        </NavigationContainer> */}
+        
+      </SafeAreaView>
+    
   );
 }
 

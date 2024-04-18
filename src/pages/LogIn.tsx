@@ -1,6 +1,7 @@
 import React from 'react';
-import { SafeAreaView, Text, TextInput,View} from 'react-native';
+import { SafeAreaView, Text, TextInput,View, } from 'react-native';
 const LogIn=()=>{
+    
     return(
         <SafeAreaView style={{flex:1}}>
             <Text>logIn</Text>
@@ -9,9 +10,10 @@ const LogIn=()=>{
                 <TextInput style={{borderColor:"#fff"}}></TextInput>
             </View>
             <View style={{backgroundColor:"#ececec"}}>
-                <Text>이메일</Text>
+                <Text>비밀번호</Text>
                 <TextInput style={{borderColor:"#fff"}}></TextInput>
             </View>
+            
             
         </SafeAreaView>
     )

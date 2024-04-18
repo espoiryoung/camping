@@ -13,7 +13,7 @@ const Header=({title}:Props)=>{
             <TouchableOpacity >
                 <Image source={require('@icons/leftArrow.png')}/>
             </TouchableOpacity>
-            <Text style={{ color:"#573353",fontSize:18, fontWeight:'bold', backgroundColor:"#000"}}>{title}</Text>
+            <Text style={{ color:"#573353",fontSize:18, fontWeight:'bold',}}>{title}</Text>
         </View>
     )
 

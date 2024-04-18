@@ -1,23 +1,24 @@
 import React,{useEffect} from 'react';
 //import Clipboard from '@react-native-clipboard/clipboard';
-import {API} from '../apis/index.js';
+//import {API} from '../apis/index.js';
 import { ImageBackground,StyleSheet, Image, SafeAreaView, Text, TextInput,View, Linking, Button, Alert,Clipboard, TouchableOpacity, ScrollView} from 'react-native';
-
+import axios from 'axios';
 const CampDetail=()=>{
     
+    //TODO: 전화번호 넘겨받고 넘겨주기
     const callAlert = () =>{
         Alert.alert( '010-XXXX-XXXX',"",[
             {
                 text: '전화걸기',
-                onPress: ()=> {Linking.openURL(`tel:01032720910`)},
+                onPress: ()=> {Linking.openURL(`tel:01000000000`)},
 
             },
             {
                 text: '클립보드에 복사하기',
                 // TODO: 클립보드 기능
-                onPress: () => console.log('Ask me later pressed'),
-              },
-              {
+                onPress: () => console.log('클립보드에 복사하기'),
+            },
+            {
                 text:'취소',
                 onPress: () => console.log('Cancel Pressed'),
                 style: 'cancel',
@@ -30,19 +31,26 @@ const CampDetail=()=>{
     // };
 
 //TODO: API연결
-    // useEffect(()=>{
-    //     getList();
-    // },[]);
 
-    // const getList=async()=>{
-    //     const res = await API.get('/basedList')
-    //     console.log(res);
-    //     }
+    const serviceKey='TseWf5%2BGtqbeYPvniw22jUCsTdxa7%2BX%2BXHaw0%2BtgbRID7LWSIBQGrE9AzfSiyVkyd42wsTBzDheTkd1OPQkbtw%3D%3D';
+    
+    useEffect(()=>{
+        getList();
+    },[]);
 
-    
-    
+    const getList=async()=>{
+        try{
+            const res = await axios (`http://apis.data.go.kr/B551011/GoCamping/basedList?numOfRows=5&pageNo=1&MobileOS=IOS&MobileApp=camping&serviceKey=${serviceKey}&_type=json`,);
+            console.log(res);
+        }
+        catch(error){
+            console.error(error);
+        }
+    };
 
-    
+
+        
+
     return(
         
         <SafeAreaView style={{flex:1,}}>
