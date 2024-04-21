@@ -41,7 +41,7 @@ const CampDetail=()=>{
     const getList=async()=>{
         try{
             const res = await axios (`http://apis.data.go.kr/B551011/GoCamping/basedList?numOfRows=5&pageNo=1&MobileOS=IOS&MobileApp=camping&serviceKey=${serviceKey}&_type=json`,);
-            console.log(res);
+            //console.log(res);
         }
         catch(error){
             console.error(error);

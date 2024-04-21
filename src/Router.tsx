@@ -25,6 +25,7 @@ const MainTab = () => {
             <Tab.Screen name="아티클" component={ArticleMain} />
             <Tab.Screen name="커뮤니티" component={CommunityMain} />
             <Tab.Screen name="환경설정" component={SettingMain} />
+            <Tab.Screen name="작업중" component={LogIn} />
         </Tab.Navigator>
 
     )
